@@ -1,18 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/iv_menu"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_gravity="top"
+        android:layout_weight="1"
+        android:contentDescription="TODO"
+        app:srcCompat="@drawable/reserv_camping_logo"
+        tools:layout_editor_absoluteX="-120dp"
+        tools:layout_editor_absoluteY="40dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_titre"
+        android:layout_width="294dp"
+        android:layout_height="50dp"
+        android:layout_gravity="top"
+        android:layout_marginStart="60dp"
+        android:layout_weight="2"
+        android:text="CENTRALE DE RÉSERVATION DES CAMPINGS AU CANADA"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="599dp"
+        android:layout_weight="3">
+
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="19dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="1"
+            android:textColor="#009933"
+            android:textSize="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_choisirUneRegion"
+            android:layout_width="177dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="CHOISIR UNE RÉGION"
+            app:layout_constraintStart_toEndOf="@+id/tv_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="131dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toEndOf="@+id/tv_choisirUneRegion"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="19dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="92dp"
+            android:text="2"
+            android:textColor="#009933"
+            android:textSize="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_dateArrivee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="100dp"
+            android:text="DATE D'ARRIVÉE"
+            app:layout_constraintStart_toEndOf="@+id/tv_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <CalendarView
+            android:id="@+id/cv_calendrier"
+            android:layout_width="184dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="19dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="160dp"
+            android:text="3"
+            android:textColor="#009933"
+            android:textSize="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_nbrNuit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="160dp"
+            android:text="NOMBRE DE NUITÉES"
+            app:layout_constraintStart_toEndOf="@+id/tv_3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="134dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nbrNuit" />
+
+        <TextView
+            android:id="@+id/tv_4"
+            android:layout_width="19dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="292dp"
+            android:text="4"
+            android:textColor="#009933"
+            android:textSize="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_services"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SERVICES"
+            tools:layout_editor_absoluteX="51dp"
+            tools:layout_editor_absoluteY="304dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
